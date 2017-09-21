@@ -39,6 +39,7 @@
     "cloudinary": "^1.4.6",
     "cookie-parser": "^1.4.3",
     "css-loader": "^0.26.1",
+    "dotenv": "^4.0.0",
     "express": "^4.14.0",
     "express-session": "^1.14.2",
     "extract-text-webpack-plugin": "^1.0.1",

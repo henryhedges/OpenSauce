@@ -24,7 +24,7 @@ class AddRecipeFromLink extends Component {
 
   componentDidMount () {
     this.recaptchaInstance = grecaptcha.render('recaptchaLink', {
-        sitekey : '6LdWOBEUAAAAACTUSdYkHEjqeJIVtR7zM-yK0dbX',
+        sitekey : '6LccejEUAAAAAJ2caTF-8hro_zW767SAAsWIEG2X',
         callback: this.verifyCallback.bind(this),
         theme : 'limit',
         render: 'explicit',

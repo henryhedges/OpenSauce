@@ -35,7 +35,7 @@ class SignUp extends Component {
   componentDidMount () {
     // create a recaptcha instance on the page contains the site key, the secret you need is in config.js
     this.recaptchaInstance = grecaptcha.render('recaptchaSignUp', {
-        sitekey : '6LdWOBEUAAAAACTUSdYkHEjqeJIVtR7zM-yK0dbX',
+        sitekey : '6LccejEUAAAAAJ2caTF-8hro_zW767SAAsWIEG2X',
         callback: this.verifyCallback.bind(this),
         theme : 'dark',
         render: 'explicit',

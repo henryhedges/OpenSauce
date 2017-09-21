@@ -1,8 +1,11 @@
+require('dotenv').load()
+
 const mongoose = require('mongoose');
-const config = require('../env/config.js')
+const config = require('../env/config.js');
+const env = process.env;
 
 mongoose.Promise = global.Promise;
-const mongodbUri = 'mongodb://'+ config.mLabObj.username + ':' + config.mLabObj.password + '@ds133328.mlab.com:33328/heroku_vjlpd3gp';
+const mongodbUri = 'mongodb://'+ env.MLAB_USERNAME + ':' + env.MLAB_PASSWORD + '@ds141464.mlab.com:41464/heroku_b8x5xr2m';
 mongoose.connect(mongodbUri);
 const connection = mongoose.connection;
 

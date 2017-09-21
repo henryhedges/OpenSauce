@@ -1,3 +1,5 @@
+require('dotenv').load()
+
 const express = require('express')
 const router = express.Router()
 const path = require('path');
@@ -7,7 +9,6 @@ const cookieParser = require('cookie-parser');
 const db = require('./../db/db.js')
 const config = require('../env/config.js')
 const axios = require('axios')
-
 
 //takes a user, and a plain password text, returns true or false.
 //thx bCrypt
@@ -34,7 +35,7 @@ router.verifyPassword = function(user, plainPass) {
 router.authRecaptcha = function (req, res, next) {
     // construct url to send and verify recaptcha
     let captchaRes = req.body['g-recaptcha-response'];
-    let secret = config.recaptcha.secret;
+    let secret = process.env.RECAPTCHA_SECRET;
     let verificationURL = 'https://www.google.com/recaptcha/api/siteverify?secret='
         + secret + '&response='+ captchaRes + '&remoteip=' + req.connection.remoteAddress;
 

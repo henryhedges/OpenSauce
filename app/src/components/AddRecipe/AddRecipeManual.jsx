@@ -57,7 +57,7 @@ class AddRecipeManual extends Component {
 
   componentDidMount(){
     this.recaptchaInstance = grecaptcha.render('recaptchaManual', {
-        sitekey : '6LdWOBEUAAAAACTUSdYkHEjqeJIVtR7zM-yK0dbX',
+        sitekey : '6LccejEUAAAAAJ2caTF-8hro_zW767SAAsWIEG2X',
         callback: this.verifyCallback.bind(this),
         theme : 'limit',
         render: 'explicit',
