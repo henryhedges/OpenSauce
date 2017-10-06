@@ -8,6 +8,8 @@ const fs = require('fs');
 const config = require('../env/config');
 const router = express.Router();
 const db = require('../db/db.js');
+const Xray = require('x-ray');
+const x = Xray();
 
 cloudinary.config(config.cloudConfig);
 
@@ -35,6 +37,18 @@ router.get('/', function(req, res) {
             })
     }
 })
+
+
+// router.get('/nightmare', function(req,res){
+
+//     x('http://www.foodnetwork.com/recipes/ree-drummond/pumpkin-cinnamon-rolls-2644133', {
+//         ingredients: x('.o-Ingredients__m-Body',[{ 
+//             section: ['.o-Ingredients__a-SubHeadline']
+//         }])
+//     })(function(err, obj) {
+//         res.send( obj );
+//     })
+// })
 
 router.get('/:username/userrecipes', function(req, res) {
     let offset = 0;
@@ -163,6 +177,7 @@ router.get('/:recipeId', function(req, res) {
 //send recipe object back to client
 //if invalid website or no recipe is scraped
 //it sends back and error
+
 router.post('/scraperecipe', authRoutes.authRecaptcha, function(req, res) {
     var url = req.body.url
     var userId = req.body.userId

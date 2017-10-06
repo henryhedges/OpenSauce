@@ -14,6 +14,7 @@ import MyRecipes from './RouteMyRecipes';
 import RouteViewRecipe from './RouteViewRecipe';
 import RouteEditRecipe from './RouteEditRecipe';
 import RouteAbout from './RouteAbout';
+import RouteTestScraper from './RouteTestScraper';
 
 //Redux Stuff
 import { createStore, applyMiddleware } from 'redux';
@@ -56,6 +57,9 @@ function renderApplication () {
 
           {/*About route */}
           <Route path="/about" component={RouteAbout}/>
+
+          {/* test scrapers */}
+          <Route path="/testscraper" component={RouteTestScraper}/>
      
           {/* Recipe Routes */}
           <Route path="/addrecipe(?:recipeId)" component={RouteAddRecipe}/>

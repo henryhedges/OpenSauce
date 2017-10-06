@@ -69,7 +69,8 @@
     "validator": "^6.2.1",
     "webpack": "^1.14.0",
     "webpack-dev-middleware": "^1.2.0",
-    "webpack-hot-middleware": "^1.1.0"
+    "webpack-hot-middleware": "^1.1.0",
+    "x-ray": "^2.3.2"
   },
   "devDependencies": {
     "chai": "^3.5.0",

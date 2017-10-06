@@ -44,6 +44,7 @@ router.authRecaptcha = function (req, res, next) {
         if (resObj.data.success === true){
             return next()
         } else {
+            console.error('Error with recaptcha - ', resObj);
             throw new Error('There was a problem with your recaptcha response, please try again')
         }
     })
