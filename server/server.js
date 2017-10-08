@@ -6,7 +6,7 @@ const recipeRoutes = require('./routes/recipeRoutes.js');
 const authRoutes = require('./routes/authRoutes.js')
 
 const db = require('./db/db.js')
-const config = require('./env/config')
+// const config = require('./env/config')
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 

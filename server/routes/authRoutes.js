@@ -7,7 +7,7 @@ const multer = require('multer'); // Node.js middleware for handling `multipart/
 const bcrypt = require('bcrypt-nodejs');
 const cookieParser = require('cookie-parser');
 const db = require('./../db/db.js')
-const config = require('../env/config.js')
+// const config = require('../env/config.js')
 const axios = require('axios')
 
 //takes a user, and a plain password text, returns true or false.

@@ -1,7 +1,7 @@
 require('dotenv').load()
 
 const mongoose = require('mongoose');
-const config = require('../env/config.js');
+// const config = require('../env/config.js');
 const env = process.env;
 
 mongoose.Promise = global.Promise;
