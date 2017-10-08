@@ -5,13 +5,16 @@ const cloudinary = require('cloudinary');
 const authRoutes = require('./authRoutes.js');
 const path = require('path');
 const fs = require('fs');
-const config = require('../env/config');
 const router = express.Router();
 const db = require('../db/db.js');
 const Xray = require('x-ray');
 const x = Xray();
 
-cloudinary.config(config.cloudConfig);
+cloudinary.config({
+        cloud_name: 'sample',
+        api_key: '874837483274837',
+        api_secret: 'a676b67565c6767a6767d6767f676fe1'
+    });
 
 //route for homepage which returns recent recipes
 router.get('/', function(req, res) {
